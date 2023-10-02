@@ -1,0 +1,99 @@
+.app {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 5px 0px;
+  box-shadow: 0 1px 20px rgba(56, 40, 40, 0.05);
+  color: #333;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: auto;
+  line-height: 36px;
+  margin-right: 15px;
+}
+
+.app-head {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  height: fit-content;
+  margin: auto;
+
+  .custom-input {
+    width: fit-content;
+  }
+
+  .app-search {
+    width: 100%;
+    flex-direction: row;
+    margin-left: 10px;
+
+    button {
+      transition-duration: 0.3s;
+      &:hover {
+        scale: 1.15;
+      }
+    }
+
+    @media screen and (max-width: 685px) {
+      width: 100%;
+    }
+
+    input {
+      width: 80%;
+    }
+    svg {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 685px) {
+    flex-direction: column;
+  }
+}
+
+.app-columns-container {
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.app-columns {
+  width: 100%;
+  padding: 0px 30px;
+  display: inline-flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.app-columns-last {
+  flex-basis: 290px;
+  min-width: 290px;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(217 215 215);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  //-webkit-box-shadow: inset 0 0 6px rgba(179, 174, 174, 0.5);
+}

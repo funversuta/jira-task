@@ -1,0 +1,104 @@
+.card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 9%) 0px 9px 12px, rgb(0 0 0 / 6%) 0px 6px 6px;
+  cursor: pointer;
+  width: 48%;
+
+  &.not-search-target {
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+  }
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.card-top-more {
+  width: 30px;
+  height: 20px;
+  transform: translateX(15px);
+  flex: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: 200ms;
+  position: absolute;
+  left: auto;
+  right: 0;
+  margin-right: 10px;
+}
+
+.card:hover .card-top-more {
+  opacity: 1;
+}
+
+.card-title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  overflow: hidden;
+}
+
+.card-desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-priority {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer-item {
+  border-radius: 40px;
+  padding: 4px 12px;
+  background-color: #f8f8f8;
+  color: #000;
+  width: fit-content;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.card-footer-icon {
+  height: 13px;
+  width: 13px;
+}
+
+.card-footer-user {
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-footer-comments {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 3px;
+  }
+}

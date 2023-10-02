@@ -1,0 +1,198 @@
+.cardinfo {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 550px;
+  width: fit-content;
+  max-width: 650px;
+  height: fit-content;
+
+  &-row {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    .cardinfo-box {
+      width: fit-content;
+    }
+  }
+}
+
+.cardinfo-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardinfo-box-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &.priority {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+.cardinfo-box-title p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cardinfo-box-title svg {
+  height: 18px;
+  width: 18px;
+}
+
+.cardinfo-select {
+  width: 100%;
+}
+
+.custom-input-display {
+  background-color: transparent;
+}
+
+.cardinfo-file-link {
+  margin-left: 5px;
+  color: #000000;
+
+  &:hover {
+    color: #008000;
+    cursor: pointer;
+  }
+}
+
+.cardinfo-file {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.custom-file-input {
+  color: transparent;
+  margin-left: auto;
+  width: 6.5rem;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Choose a file";
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.cardinfo-box ul {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+.cardinfo-box ul li {
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cardinfo-box ul .li-active {
+  box-shadow: 0 0 0 3px yellow;
+  border: 2px solid red;
+  padding: 8px;
+}
+
+.cardinfo-box-progress-bar {
+  width: 100%;
+  border-radius: 30px;
+  height: 10px;
+  border: 1px solid #ccc;
+}
+
+.cardinfo-box-progress {
+  height: 100%;
+  border-radius: 30px;
+  background-color: skyblue;
+  width: 0;
+  transition: 200ms;
+}
+
+.cardinfo-box-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cardinfo-box-task-checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.cardinfo-box-task-checkbox input,
+.cardinfo-box-task-checkbox svg {
+  height: 18px;
+  width: 18px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cardinfo-box-task-checkbox p {
+  flex: 1;
+  line-height: 18px;
+}
+
+.cardinfo-box-task-checkbox .completed {
+  text-decoration-line: line-through;
+}
+
+.cardinfo-box input[type="date"] {
+  width: fit-content;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+}
+@media screen and (max-width: 685px) {
+  .cardinfo {
+    min-width: 290px;
+    gap: 10px;
+    height: 400px;
+  }
+}
+
+.cardinfo-comment {
+  margin-bottom: 20px;
+}
+
+.closeIcon {
+  left: auto;
+  right: 30px;
+  top: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.taskButton {
+  color: white;
+  background-color: cornflowerblue;
+}
