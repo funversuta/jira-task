@@ -31,7 +31,7 @@ export const Projects: FC<IProps> = ({ projects, setProjects }) => {
     <div
       key={project.id}
       onClick={() => {
-        navigate(`/${project.name}`);
+        navigate(`/jira-task/${project.name}`);
       }}
     >
       {project.name}

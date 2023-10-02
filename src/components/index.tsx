@@ -15,10 +15,10 @@ export const Index: FC<IProps> = ({ projects, setProjects }) => {
   return (
     <Routes>
       <Route
-        index
+        path="/jira-task/"
         element={<Projects projects={projects} setProjects={setProjects} />}
       />
-      <Route path="/:id" element={<Tasks />} />
+      <Route path="/jira-task/:id" element={<Tasks />} />
     </Routes>
   );
 };

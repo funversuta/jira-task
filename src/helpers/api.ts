@@ -1,15 +1,18 @@
 import { IColumn } from "../interface/interfaces";
+import { storageColumnsDefault } from "./helper";
 
 export class ColumnAPI {
   async fetchColumnList(LocalStorageKeyName: string): Promise<IColumn[]> {
     let ColumnList: IColumn[] = [];
 
-    if (localStorage.getItem(LocalStorageKeyName)) {
-      const localStorageData: IColumn[] = JSON.parse(
-        localStorage.getItem(LocalStorageKeyName) ?? ""
-      );
-      ColumnList = [...localStorageData];
-    }
+    localStorage.getItem(LocalStorageKeyName);
+    const localStorageData: IColumn[] = JSON.parse(
+      localStorage.getItem(LocalStorageKeyName) ?? ""
+    );
+    ColumnList = [...localStorageData];
+    ColumnList.length == 0
+      ? (ColumnList = [...JSON.parse(storageColumnsDefault)])
+      : ColumnList;
 
     return ColumnList;
   }

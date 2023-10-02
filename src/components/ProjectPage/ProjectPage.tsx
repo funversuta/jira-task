@@ -27,6 +27,15 @@ export const ProjectPage: FC<IProps> = ({
       localStorage.getItem(LocalStorageKeyName) ?? storageColumnsDefault
     )
   );
+  async function fetchData() {
+    const columns: IColumn[] = await fetchColumnList(LocalStorageKeyName);
+    setColumns(columns);
+  }
+
+  console.log(
+    localStorage.getItem(LocalStorageKeyName),
+    localStorage.getItem(LocalStorageKeyName) ?? storageColumnsDefault
+  );
 
   useEffect(() => {
     fetchData();
@@ -35,11 +44,6 @@ export const ProjectPage: FC<IProps> = ({
   useEffect(() => {
     updateLocalStorageColumns(columns, LocalStorageKeyName);
   }, [columns]);
-
-  async function fetchData() {
-    const columns: IColumn[] = await fetchColumnList(LocalStorageKeyName);
-    setColumns(columns);
-  }
 
   const allCards = columns.reduce((acc: any[], item: { cards: any }) => {
     return acc.push(...item.cards), acc;
@@ -215,7 +219,7 @@ export const ProjectPage: FC<IProps> = ({
         <Button
           children={"Back"}
           className={"wrap"}
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/jira-task/")}
         />
         <Input
           placeholder="Search Card"
