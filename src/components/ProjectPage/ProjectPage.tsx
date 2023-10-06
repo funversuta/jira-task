@@ -32,11 +32,6 @@ export const ProjectPage: FC<IProps> = ({
     setColumns(columns);
   }
 
-  console.log(
-    localStorage.getItem(LocalStorageKeyName),
-    localStorage.getItem(LocalStorageKeyName) ?? storageColumnsDefault
-  );
-
   useEffect(() => {
     fetchData();
   }, []);
